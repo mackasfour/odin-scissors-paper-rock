@@ -17,24 +17,32 @@
             <p>Choose Your Character!</p>
         </div>
         <div class="choices">
-            <input class="images" value="scissors" type="image" src="images/scissors.png"/>
-            <input class="images" value="paper" type="image" src="images/paper.png"/>
-            <input class="images" value="rock" type="image" src="images/rock.png"/>
+            <input class="images" id="scissors" value="scissors" type="image" src="images/scissors.png" onclick="playRound(value, computerPlay());"/>
+            <input class="images" id="paper" value="paper" type="image" src="images/paper.png" onclick="playRound(value, computerPlay());"/>
+            <input class="images" id="rock" value="rock" type="image" src="images/rock.png" onclick="playRound(value, computerPlay());"/>
         </div>
     </div>
-    <div class="result">
-        
+    <div class="results">
+        <div id="computerPick">
+
+        </div>
+        <div id="roundResult">
+
+        </div>
     </div>
     <div class="scores">
-        <div class="playerScore">
+        <div id="playerScore">
             <p>Your score: </p>
         </div>
-        <div class="computerScore">
+        <div id="computerScore">
             <p>Computer's score: </p>
         </div>
     </div>
-    <div class="overallResult">
+    <div id="overallResult">
 
+    </div>
+    <div class="button">
+        <button hidden id="playAgainButton" type="button" onClick="window.location.reload();">Play Again?</button>
     </div>
 </body>
 </html>
